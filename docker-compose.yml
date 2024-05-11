@@ -1,0 +1,13 @@
+services:
+  laravel:
+    container_name: test_docker
+    build: .
+    volumes:
+      - ./storage:/app/storage
+    networks:
+      - my_network
+
+networks:
+  my_network:
+    external: true
+    name: my_network
